@@ -40,7 +40,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}    
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
+    gtag('config', 'G-5EQ9EXY2WV');
 
     // City tracking via ipapi
     fetch("https://ipapi.co/json/")
@@ -60,6 +60,7 @@
   <div class="card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Carrefour_logo.svg/2560px-Carrefour_logo.svg.png" alt="Carrefour Logo" />
     <h1>عروض الجمعة البيضاء</h1>
+<h1>أحصل علي 5 منتجات مجانا أضغط الأن للحصول علي العرض </h1>
   </div>
 </body>
 </html>
