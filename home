@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عروض الجمعة البيضاء - كارفور</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f6f6f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .card {
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      max-width: 380px;
+      width: 100%;
+    }
+    img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0;
+      color: #003987;
+    }
+  </style>
+  <!-- GA4 + Location Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}    
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+
+    // City tracking via ipapi
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        gtag('event', 'location_info', {
+          city: data.city,
+          region: data.region,
+          country: data.country_name,
+          ip: data.ip
+        });
+      })
+      .catch(e=>console.log('Location Error', e));
+  </script>
+</head>
+<body>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Carrefour_logo.svg/2560px-Carrefour_logo.svg.png" alt="Carrefour Logo" />
+    <h1>عروض الجمعة البيضاء</h1>
+  </div>
+</body>
+</html>
